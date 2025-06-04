@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: bc-noc-dev-com-tls
+spec: 
+  secretName: bc-noc-dev-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: bc-noc-dev.com
+  dnsNames:
+    - bc-noc-dev.com
+    - www.bc-noc-dev.com
